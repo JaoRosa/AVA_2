@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -43,6 +44,7 @@ public class Transporte {
     public void imprimir() {
         System.out.println("Capacidade do tanque: " + capacidadeTanque);
         System.out.println("Número de passageiros: " + numeroPassageiros);
-        System.out.println("Preço: R$" + preco);
+        DecimalFormat df = new DecimalFormat("R$###,###,###.00");
+        System.out.println("Preço: " + df.format(preco));
     }
 }
